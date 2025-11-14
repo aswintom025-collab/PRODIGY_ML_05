@@ -25,7 +25,7 @@ def prepare_for_training(ds, shuffle_buffer_size=1000):
     ds = ds.prefetch(AUTOTUNE)
     return ds
 
-print("Loading dataset (this may download ~1+ GB the first time)...")
+
 (ds_train, ds_val), ds_info = tfds.load(
     DATASET_NAME,
     split=["train", "validation"],
